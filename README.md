@@ -31,19 +31,19 @@ If you don't want to monkey-patch Integer, you can do this instead:
     I18n.locale = :fr
     NumberWords.int_to_words 123  # => "cent vingt-trois"
 
-'number_words/core_ext' isn't "require"d by default
+`number_words/core_ext` isn't `require`d by default
 
 ## available locales
 
-    gem 'number_words_fr'  # French
-    gem 'number_words_en'  # English (using short-scale billions)
+    gem 'number_words_fr'  # French -> http://github.com/conanite/number_words_fr
+    gem 'number_words_en'  # English (using short-scale billions)  -> http://github.com/conanite/number_words_en
 
 
 ## Contributing
 
 ### There are two ways to contribute - firstly the usual:
 
-1. Fork it ( http://github.com/<my-github-username>/number_words/fork )
+1. Fork it ( http://github.com/conanite/number_words/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
@@ -53,6 +53,7 @@ If you don't want to monkey-patch Integer, you can do this instead:
 
 1. if you want to contribute a locale, make your own gem that plugs into this thus:
 
+    ```ruby
     class RussianNumberWords
       def int_to_words i, options={}
         # ur code here
@@ -60,6 +61,7 @@ If you don't want to monkey-patch Integer, you can do this instead:
     end
 
     NumberWords.add_handler :ru, RussianNumberWords.new
+    ```
 
 2. publish the gem
-3. let me know and I'll add a link here
+3. let me know and I'll add a link here under 'available locales'
