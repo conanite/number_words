@@ -35,8 +35,8 @@ If you don't want to monkey-patch Integer, you can do this instead:
 
 ## available locales
 
-    gem 'number_words_fr'  # French -> http://github.com/conanite/number_words_fr
-    gem 'number_words_en'  # English (using short-scale billions)  -> http://github.com/conanite/number_words_en
+* `gem 'number_words_fr'`  # French -> http://github.com/conanite/number_words_fr
+* `gem 'number_words_en'`  # English (using short-scale billions)  -> http://github.com/conanite/number_words_en
 
 
 ## Contributing
